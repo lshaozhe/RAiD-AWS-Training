@@ -11,6 +11,10 @@ app.use(
     extended: true,
   })
 );
+app.use((err, req, res, next) => {
+  console.error(err.stack)
+  res.status(500).send('Something broke!')
+})
 
 app.get('/', (request, response) => {
   response.json({ info: 'Node.js, Express, and Postgres API' });
