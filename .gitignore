@@ -3,3 +3,5 @@
 *.pem
 *.tfstate
 *.tfstate.*
+
+node_modules/
