@@ -24,7 +24,7 @@ resource "aws_security_group" "sz-training-ec2-sg" {
 resource "aws_instance" "sz-training-ec2" {
   ami                         = "ami-0464f90f5928bccb8"
   instance_type               = "t2.micro"
-  subnet_id                   = var.private_subnet_id
+  subnet_id                   = var.private_subnet_a_id
   vpc_security_group_ids      = [aws_security_group.sz-training-ec2-sg.id]
   associate_public_ip_address = true
 
